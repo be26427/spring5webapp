@@ -48,6 +48,8 @@ public class BootStrapData implements CommandLineRunner {
         Publisher publisher = new Publisher("St. Martin's Press", "120 Broadway", "New York", "NY", "10271");
         darkdawn.setPublisher(publisher);
         publisher.getBooks().add(darkdawn);
+        dragonlance.setPublisher(publisher);
+        publisher.getBooks().add(dragonlance);
         publisherRepository.save(publisher);
 
         System.out.println("Number of Publishers: " + publisherRepository.count());
